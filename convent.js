@@ -19,5 +19,8 @@ var openlayerUtil={
 	},
    getBound:function(mapname){
    	return new OpenLayers.Bounds(mapArgs[mapname].b1,mapArgs[mapname].b2,mapArgs[mapname].b3,mapArgs[mapname].b4);
+   },
+   getCenter:function(mapname){
+   	return new OpenLayers.LonLat(mapArgs[mapname].cx,mapArgs[mapname].cy);
    }
 }
