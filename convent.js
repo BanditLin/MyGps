@@ -1,5 +1,11 @@
+ document.write("<script language='javascript' src='https://raw.github.com/BanditLin/MyGps/master/mapArg.js'></script>");
 var openlayerConvent={
-  conventPoint:function(x,y,ox,oy,sx,sy,rd){
+  conventPoint:function(x,y,mapname){
+	          var ox=mapArgs[mapname].ox;
+		  var oy=mapArgs[mapname].oy;
+		  var sx=mapArgs[mapname].sx;
+		  var sy=mapArgs[mapname].sy;
+		  var rd=mapArgs[mapname].rd;
 		  var d=rd*Math.PI/180;
 		  var tx=(x-ox)*Math.cos(d)+(y-oy)*Math.sin(d)+ox;
 		  var ty=-(x-ox)*Math.sin(d)+(y-oy)*Math.cos(d)+oy;
