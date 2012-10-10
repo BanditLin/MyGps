@@ -1,5 +1,5 @@
  document.write("<script language='javascript' src='https://raw.github.com/BanditLin/MyGps/master/mapArg.js'></script>");
-var openlayerConvent={
+var openlayerUtil={
   conventPoint:function(x,y,mapname){
 	          var ox=mapArgs[mapname].ox;
 		  var oy=mapArgs[mapname].oy;
@@ -16,5 +16,8 @@ var openlayerConvent={
 		  ty=(oy+th);
 		  var point=new OpenLayers.Geometry.Point(tx,ty);
 		  return point;
-	}
+	},
+   getBound:function(mapname){
+   	return new OpenLayers.Bounds(mapArgs[mapname].b1,mapArgs[mapname].b2,mapArgs[mapname].b3,mapArgs[mapname].b4);
+   }
 }
